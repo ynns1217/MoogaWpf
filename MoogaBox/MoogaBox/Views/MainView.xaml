@@ -1,0 +1,37 @@
+﻿<mah:MetroWindow x:Class="MoogaBox.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:MoogaBox"
+        mc:Ignorable="d"
+        Title="Login" Height="550" Width="400" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="DisplayName" Grid.Row="0"/>
+        <TextBox x:Name="InsertID" Grid.Row="1" Style="{StaticResource MahApps.Styles.TextBox}"
+                 mah:TextBoxHelper.Watermark="ID" Margin="5"
+                 mah:TextBoxHelper.UseFloatingWatermark="true" FontSize="16"/>
+
+        <TextBox x:Name="InsertPW" Grid.Row="2" Style="{StaticResource MahApps.Styles.TextBox}"
+                 mah:TextBoxHelper.Watermark="PW" Margin="5"
+                 mah:TextBoxHelper.UseFloatingWatermark="true" FontSize="16"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+
+            <Button x:Name="Login" IsDefault="True" Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}"
+                    Content="Login"/>
+
+            <Button x:Name="GotoGaib" IsCancel="True" Style="{StaticResource MahApps.Styles.Button.Dialogs}" Content="Gaib"/>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>
